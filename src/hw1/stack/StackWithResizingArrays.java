@@ -47,7 +47,7 @@ public class StackWithResizingArrays<Item> {
 		//Create an array with given capacity
     	Item[] clone = (Item[]) new Object[capacity];
     	//Copy items from stack into new array
-    	for (int i = 0; i < capacity; i++) {
+    	for (int i = 0; i < length; i++) {
     		clone[i] = stack[i];
     	}
     	//Set the cloned array as the new stack

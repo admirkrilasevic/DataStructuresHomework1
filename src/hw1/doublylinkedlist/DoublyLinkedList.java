@@ -3,7 +3,7 @@ package hw1.doublylinkedlist;
 import java.util.Iterator;
 
 
-public class DoublyLinkedList<Item> {
+public class DoublyLinkedList<Item> implements Iterable<Item> {
 	
 	private Node<Item> head;
 	private Node<Item> tail;
