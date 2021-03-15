@@ -75,8 +75,8 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
             throw new IndexOutOfBoundsException("The doubly linked list is empty.");   
         }
         else if (size == 1) {
-        	//If there is only 1 node, set head to null
-            head = null;                                                        
+        	//If there is only 1 node, set head and tail to null
+            head = tail = null;                                                        
         } 
         else {
         	//head points to the next node
@@ -95,8 +95,8 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
             throw new IndexOutOfBoundsException("The doubly linked list is empty.");   
         } 
         else if (size == 1) {
-        	//If there is only 1 node, set head to null
-            head = null;                                                        
+        	//If there is only 1 node, set head and tail to null
+            head = tail = null;                                                        
         } 
         else {                                                                
             //tail points to previous node
