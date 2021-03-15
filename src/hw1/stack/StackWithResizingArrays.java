@@ -19,7 +19,7 @@ public class StackWithResizingArrays<Item> {
     	if (stack.length == length) {
     		resize(2*stack.length);
     	}
-    	//Add item to stack and records increase of number of items in stack
+    	//Add item to stack and record increase of number of items in stack
     	stack[length++] = item;
     }
     
@@ -29,7 +29,7 @@ public class StackWithResizingArrays<Item> {
     	if (isEmpty()) {                                                    
             throw new IndexOutOfBoundsException("The stack is empty.");     
         }
-    	//Store value from top of stack into variable item, decrease number of items in stack
+    	//Store value from top of stack into variable item and record decrease number of items in stack
         Item item = stack[--length];
         //Free the spot where the value was
         stack[length] = null;
