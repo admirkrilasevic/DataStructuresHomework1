@@ -74,8 +74,16 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
         	//Throw exception if list is empty
             throw new IndexOutOfBoundsException("The doubly linked list is empty.");   
         }
-        //head points to the next node
-        head = head.next;
+        else if (size == 1) {
+        	//If there is only 1 node, set head to null
+            head = null;                                                        
+        } 
+        else {
+        	//head points to the next node
+            head = head.next;
+            //head's previous is set to null, thus removing first node
+            head.previous = null;
+        }
         //List size decreased
         size--;                                                                 
     }
@@ -84,13 +92,17 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
     public void removeFromRear() {
         if (head == null) { 
         	//Throw exception if list is empty
-            throw new IndexOutOfBoundsException("The doubly linked list is empty.");   // 1
-        } else if (size == 1) {
+            throw new IndexOutOfBoundsException("The doubly linked list is empty.");   
+        } 
+        else if (size == 1) {
         	//If there is only 1 node, set head to null
             head = null;                                                        
-        } else {                                                                
+        } 
+        else {                                                                
             //tail points to previous node
-        	tail = tail.previous; 
+        	tail = tail.previous;
+        	//tail's next is set to null, thus removing last node
+        	tail.next = null;
         }
         //List size decreased
         size--;                                                                 
