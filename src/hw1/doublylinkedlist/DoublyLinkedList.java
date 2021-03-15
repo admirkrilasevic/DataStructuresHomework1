@@ -59,8 +59,8 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
             tail.next = newNode;  
             //newNode's previous set to tail  
             newNode.previous = tail;   
-            //tail's next point to null  
-            tail.next = null;
+            //newNode's next point to null  
+            newNode.next = null;
             //newNode becomes new tail  
             tail = newNode; 
         }  
