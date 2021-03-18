@@ -64,7 +64,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
             //newNode becomes new tail  
             tail = newNode; 
         }  
-        //Records decrease of number of items in list
+        //Records increase of number of items in list
         size++;
     }
 	
@@ -84,7 +84,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
             //head's previous is set to null, thus removing first node
             head.previous = null;
         }
-        //List size decreased
+      //Records decrease of number of items in list
         size--;                                                                 
     }
     
@@ -104,7 +104,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
         	//tail's next is set to null, thus removing last node
         	tail.next = null;
         }
-        //List size decreased
+      //Records decrease of number of items in list
         size--;                                                                 
     }
     
